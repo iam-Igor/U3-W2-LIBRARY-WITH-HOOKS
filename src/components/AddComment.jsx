@@ -1,4 +1,4 @@
-import { Component, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Col } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 
