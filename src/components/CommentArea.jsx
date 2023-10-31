@@ -50,18 +50,16 @@ const CommentArea = ({ book, chosenBook, elementId, isLoading }) => {
   //   this.getComments();
   // }
 
-  useEffect(() => {
-    getComments();
-  }, []);
-
   // componentDidUpdate(prevProps) {
   //   if (prevProps.book !== this.props.book) {
-  //     this.getComments();
+  //     this.getComments()
   //   }
   // }
 
   useEffect(() => {
-    getComments();
+    if (book !== "") {
+      getComments();
+    }
   }, [book]);
 
   return (
