@@ -43,6 +43,7 @@ const CommentArea = ({ book, chosenBook, elementId, isLoading }) => {
       })
       .catch((err) => {
         console.log("errore", err);
+        setIsloading(false);
       });
   };
 
@@ -59,6 +60,7 @@ const CommentArea = ({ book, chosenBook, elementId, isLoading }) => {
   useEffect(() => {
     if (book !== "") {
       getComments();
+      setIsloading(true);
     }
   }, [book]);
 
@@ -72,7 +74,7 @@ const CommentArea = ({ book, chosenBook, elementId, isLoading }) => {
             chosenBook={chosenBook}
             refresh={getComments}
             thingsToShow={book}
-            isLoading={isLoading}
+            isLoading={isLoading2}
           />
           <AddComment book={book} refresh={getComments} />
         </>

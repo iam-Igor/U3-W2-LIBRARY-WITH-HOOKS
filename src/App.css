@@ -4,6 +4,22 @@
 nav {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
+#root {
+  background: radial-gradient(
+        27% 29% at right,
+        #0000 83%,
+        #ffffff 85% 99%,
+        #0000 101%
+      )
+      calc(35px / 2) 35px,
+    radial-gradient(27% 29% at left, #0000 83%, #ffffff 85% 99%, #0000 101%)
+      calc(35px / -2) 35px,
+    radial-gradient(29% 27% at top, #0000 83%, #ffffff 85% 99%, #0000 101%) 0
+      calc(35px / 2),
+    radial-gradient(29% 27% at bottom, #0000 83%, #ffffff 85% 99%, #0000 101%) 0
+      calc(35px / -2) #ebeded;
+  background-size: 70px 70px;
+}
 
 .card:hover {
   transform: scale(1.03);
